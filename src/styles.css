@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Inter, Arial, sans-serif;
+    background: #fafaf9;
+    color: #1c1917;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: rgba(250, 250, 249, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #e7e5e4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+  }
+  
+  .logo {
+    font-weight: 800;
+  }
+  
+  .nav {
+    display: flex;
+    gap: 24px;
+    font-weight: 600;
+  }
+  
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 50px;
+    align-items: center;
+    padding: 90px 8%;
+    background: radial-gradient(circle at top left, #fde68a, transparent 35%),
+      radial-gradient(circle at bottom right, #bae6fd, transparent 35%);
+  }
+  
+  .hero h1,
+  .booking-hero h1 {
+    font-size: clamp(42px, 7vw, 78px);
+    line-height: 1;
+    margin: 16px 0;
+  }
+  
+  .hero-text,
+  .booking-hero p,
+  .about p {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #57534e;
+  }
+  
+  .eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    font-size: 13px;
+    font-weight: 800;
+    color: #b45309;
+  }
+  
+  .hero-actions {
+    display: flex;
+    gap: 14px;
+    margin-top: 30px;
+  }
+  
+  .button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 18px;
+    padding: 13px 22px;
+    font-weight: 800;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .button.dark {
+    background: #1c1917;
+    color: white;
+  }
+  
+  .button.outline {
+    background: white;
+    border: 1px solid #d6d3d1;
+    color: #1c1917;
+  }
+  
+  .hero-card {
+    min-height: 460px;
+    border-radius: 34px;
+    background: linear-gradient(135deg, #fcd34d, #fb923c, #075985);
+    color: white;
+    padding: 34px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.22);
+  }
+  
+  .hero-card h2 {
+    font-size: 34px;
+    margin: 8px 0;
+  }
+  
+  .section {
+    padding: 80px 8%;
+  }
+  
+  .section h2,
+  .about h2 {
+    font-size: 42px;
+  }
+  
+  .tour-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 30px;
+  }
+  
+  .card {
+    background: white;
+    border: 1px solid #e7e5e4;
+    border-radius: 28px;
+    padding: 28px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  }
+  
+  .card h3 {
+    font-size: 24px;
+  }
+  
+  .icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 16px;
+    background: #fef3c7;
+    display: grid;
+    place-items: center;
+    font-size: 24px;
+  }
+  
+  .muted {
+    color: #78716c;
+    font-weight: 700;
+  }
+  
+  .about {
+    margin: 60px 8% 90px;
+    padding: 50px;
+    background: #1c1917;
+    color: white;
+    border-radius: 34px;
+  }
+  
+  .about p {
+    color: #d6d3d1;
+  }
+  
+  .booking-hero {
+    background: #1c1917;
+    color: white;
+    padding: 90px 8%;
+  }
+  
+  .booking-hero p {
+    max-width: 760px;
+    color: #d6d3d1;
+  }
+  
+  .booking-layout {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: 32px;
+    padding: 70px 8%;
+  }
+  
+  .booking-info,
+  .booking-form {
+    background: white;
+    border: 1px solid #e7e5e4;
+    border-radius: 28px;
+    padding: 32px;
+  }
+  
+  .booking-form {
+    display: grid;
+    gap: 18px;
+  }
+  
+  input,
+  select,
+  textarea {
+    width: 100%;
+    border: 1px solid #d6d3d1;
+    border-radius: 16px;
+    padding: 14px 16px;
+    font: inherit;
+  }
+  
+  textarea {
+    min-height: 130px;
+  }
+  
+  .grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+  
+  .grid-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 18px;
+  }
+  
+  @media (max-width: 850px) {
+    .hero,
+    .booking-layout,
+    .tour-grid,
+    .grid-2,
+    .grid-3 {
+      grid-template-columns: 1fr;
+    }
+  
+    .nav {
+      display: none;
+    }
+  
+    .hero-card {
+      min-height: 320px;
+    }
+  }
